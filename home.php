@@ -8,7 +8,7 @@ if(isset($_SESSION['username'])){
     <html> 
         <head>
             <title> HOME </title>
-            <link rel="stylesheet" type="text/css" href="style.css">
+            <link rel="stylesheet" type="text/css" href="./css/style.css">
         </head>
         <body>
 	    <h1> Welcome back, <?= $_SESSION['username']?> </h1>
