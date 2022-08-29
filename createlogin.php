@@ -9,16 +9,18 @@
     
     $uname = validate($_POST['uname']);
     $pass = validate($_POST['password']);
-
+    $email = validate($_POST['email']);
+    
     $data = [
 	'uname' => $uname,
-	'pass' => $pass
+	'pass' => $pass,
+	'email' => $email
     ];
 
 //	header("Location: newUser.php?error=createlogin reached");
 
     try{
-        $sql = "INSERT INTO users (username, password) VALUES (:uname, :pass)";
+        $sql = "INSERT INTO users (username, password, email) VALUES (:uname, :pass, :email)";
 
         $statement = $conn->prepare($sql);
         $success = $statement->execute($data);
@@ -30,7 +32,7 @@
     if($success){
         echo "Redirecting...";
         $_SESSION['username'] = $uname;
-      //  $_SESSION['name'] = $name;
+//        $_SESSION['name'] = $name;
         $_SESSION['password'] = $pass;
         header("Location: home.php");
 	
