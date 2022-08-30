@@ -9,12 +9,22 @@ header{
     font-size: 15px;
 }
 
-.welcome{
+.parallax1{
     height: 850px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/welcome_1.jpg");
 }
 
-.welcome .content{
+.parallax1{
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome{
     text-align: center;
     border-bottom: 0px rgb(255, 255, 255);
 }
@@ -25,15 +35,31 @@ header{
 
 .welcome .title h2{
     margin: 20px;
-    font-size: 40px; 
     color: white;
-    font-family: system-ui, sans-serif;
+    font: 80px "Lato", sans-serif;
     font-weight:bold;
 }
 
 .welcome .title p{
     color: white;
     font-family: system-ui, sans-serif;
+}
+
+.welcome .btn{
+    border: 2px solid black;
+    background-color: rgba(56, 214, 148, 0.349);
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: #04AA6D;
+    color: green;
+    border-radius: 16px;
+}
+
+.welcome .btn:hover{
+    background-color: #04AA6D;
+    color: white;
 }
 
 /* SubShare Title*/

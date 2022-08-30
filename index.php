@@ -1,20 +1,18 @@
 <?php echo file_get_contents("html/header.html"); ?>
 
-<div class='welcome'>
-    <div class='content'>
+<div class='parallax1'>
+    <div class='welcome'>
         <div class='title'>
             <h2> Welcome to SubShare! </h2>
             <br>
-            <p> Easily coordinate sharing subscriptions with your family!</p>
-            <a href='home.php'>
-                <p> Get Started Now! </p>
-            </a>
+            <p> Easily coordinate sharing subscriptions with your friends & family!</p>
         </div>
+        <button class="btn" href='home.php'>Get Started Now!</button>
     </div>
 </div>
 <div class='content'>
     <main>
-        
+     
     </main>
 </div>
 <?php echo file_get_contents("html/footer.html"); ?>
