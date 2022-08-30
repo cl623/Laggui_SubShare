@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato, Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
@@ -11,13 +11,12 @@ header{
 
 .parallax1{
     height: 850px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/welcome_1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/welcome_1.jpg");
 }
 
 .parallax1{
   /* Set a specific height */
-  min-height: 500px; 
-
+  min-height: 700px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -26,11 +25,11 @@ header{
 }
 .welcome{
     text-align: center;
-    border-bottom: 0px rgb(255, 255, 255);
+    padding-top: 400px;
 }
 
 .welcome .title{
-    padding: 50px;
+    border-top: 500px;
 }
 
 .welcome .title h2{
@@ -47,13 +46,13 @@ header{
 
 .welcome .btn{
     border: 2px solid black;
-    background-color: rgba(56, 214, 148, 0.349);
+    background-color: rgba(150, 233, 198, 0.123);
     color: black;
     padding: 14px 28px;
     font-size: 16px;
     cursor: pointer;
     border-color: #04AA6D;
-    color: green;
+    color: white;
     border-radius: 16px;
 }
 

@@ -3,10 +3,10 @@
 <div class='parallax1'>
     <div class='welcome'>
         <div class='title'>
-            <h2> Welcome to SubShare! </h2>
+            <h2> SubShare </h2>
             <br>
             <p> Easily coordinate sharing subscriptions with your friends & family!</p>
-        </div>
+	</div>
         <button class="btn" href='home.php'>Get Started Now!</button>
     </div>
 </div>
