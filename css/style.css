@@ -1,7 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: rgb(3, 201, 3);
 }
 
 header{
@@ -10,21 +9,21 @@ header{
     font-size: 15px;
 }
 
-.welcome-banner{
-    height: 500px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("image/welcome_1.jpeg");
+.welcome{
+    height: 850px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/welcome_1.jpg");
 }
 
-.welcome-content{
+.welcome .content{
     text-align: center;
+    border-bottom: 0px rgb(255, 255, 255);
 }
 
-welcome{
+.welcome .title{
     padding: 50px;
-    border-bottom: 1px rgb(255, 255, 255);
 }
 
-welcome h2{
+.welcome .title h2{
     margin: 20px;
     font-size: 40px; 
     color: white;
@@ -32,7 +31,7 @@ welcome h2{
     font-weight:bold;
 }
 
-welcome p{
+.welcome .title p{
     color: white;
     font-family: system-ui, sans-serif;
 }
