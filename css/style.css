@@ -10,24 +10,31 @@ header{
     font-size: 15px;
 }
 
-.content{
-    width: 80%;
-    height: auto;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+.welcome-banner{
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("image/welcome_1.jpeg");
+}
+
+.welcome-content{
+    text-align: center;
 }
 
 welcome{
-    border-bottom: 1px rgb(30, 58, 184);
+    padding: 50px;
+    border-bottom: 1px rgb(255, 255, 255);
 }
 
 welcome h2{
     margin: 20px;
-    font-size: 1.5em; 
+    font-size: 40px; 
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-weight:bold;
 }
-welcome p{
 
+welcome p{
+    color: white;
+    font-family: system-ui, sans-serif;
 }
 
 /* SubShare Title*/
