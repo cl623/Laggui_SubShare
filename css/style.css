@@ -4,10 +4,14 @@ body{
 }
 
 header{
-    padding: 28px;
     background:white;
     color: blue;
     font-size: 15px;
+}
+
+/* SubShare Title*/
+header .title{
+    padding: 28px;
 }
 
 /*Background color*/
