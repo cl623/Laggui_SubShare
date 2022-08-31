@@ -15,6 +15,7 @@ header{
 }
 
 .parallax2{
+	height: 850px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0 ,0.5)), url('../images/welcome_2.jpg');
 }
 
@@ -91,4 +92,10 @@ nav a:hover{
 nav a:active{
     background-color: #ee372a;
     color: white;
+}
+
+.about {
+    display: grid;
+    padding: 40px;
+    grid-template-columns: 1fr 4fr; 
 }
