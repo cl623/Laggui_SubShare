@@ -23,25 +23,10 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .welcome{
     text-align: center;
-    padding-top: 400px;
-}
-
-.welcome .title{
-    border-top: 500px;
-}
-
-.welcome .title h2{
-    margin: 20px;
-    color: white;
-    font: 80px "Lato", sans-serif;
-    font-weight:bold;
-}
-
-.welcome .title p{
-    color: white;
-    font-family: system-ui, sans-serif;
+    padding-top: 500px;
 }
 
 .welcome .btn{
@@ -62,7 +47,24 @@ header{
 }
 
 /* SubShare Title*/
-header .title{
+.title{
+    color: white;
+    font-family: system-ui, sans-serif;
+    font-weight:bold;
+}
+
+.title h1, .title h2{
+    margin: 20px;
+    color: white;
+    font-size: 80px;
+    font-weight:bold;
+}
+
+.title h2{
+    border-bottom: 12px white;
+}
+
+.title a{
     padding: 28px;
 }
 

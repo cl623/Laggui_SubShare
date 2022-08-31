@@ -2,12 +2,14 @@
 <html>
     <head>
         <title> Login </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
         <header>
-            <h1>ShareSub</h1>
-            <h3>Welcome to ShareSub! Coordinate sharing subscription based platforms with your friends and family easily!</h3>
+            <div class=title>
+                <h1>ShareSub</h1>
+                <h3>Welcome to ShareSub! Coordinate sharing subscription based platforms with your friends and family easily!</h3>
+            </div>
         </header>
         <main>
             <section>
