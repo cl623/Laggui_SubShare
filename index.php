@@ -27,8 +27,8 @@
 
             </div>
             <div>
-                <table>
-                    <tr>
+		<table>
+		    <tr>
                         <th></th>
                         <th>Hulu</th>
                         <th>Netflix</th>
@@ -37,38 +37,38 @@
                     </tr>
                     <tr>
                         <td>Me</td>
-                        <td><span class="material-symbols-outlined"></span></td>
-                        <td><span class="material-symbols-outlined"></span></td>
-                        <td><span class="material-symbols-outlined"></span></td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><span class="material-icons">check</span></td>
+                        <td><i class="material-icons-outlined"></i></td>
+                        <td><i class="material-icons-outlined"></i></td>
+                        <td><i class="material-icons-outlined"></i></td>
                     </tr>
                     <tr>
                         <td>Dan</td>
-                        <td><span class="material-symbols-outlined"></span></td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
+                        <td><i class="material-icons-outlined"></i></td>
                         <td></td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
                     </tr>
                     <tr>
                         <td>Angela</td>
                         <td></td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>Sean</td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
                         <td></td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>Candice</td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
                         <td></td>
                         <td></td>
-                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><i class="material-icons-outlined"></i></td>
                     </tr>
                 </table>
             </div>
