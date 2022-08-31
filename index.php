@@ -2,7 +2,7 @@
 
 <div class='parallax1'>
     <div class='welcome'>
-        <div class='title'>
+        <div class='title bar'>
             <h2> SubShare </h2>
             <br>
             <p> Easily coordinate sharing subscriptions with your friends & family!</p>

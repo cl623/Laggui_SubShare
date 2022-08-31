@@ -14,7 +14,7 @@ header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/welcome_1.jpg");
 }
 
-.parallax1{
+.parallax1, .parallax2{
   /* Set a specific height */
   min-height: 700px;
   /* Create the parallax scrolling effect */
@@ -26,7 +26,7 @@ header{
 
 .welcome{
     text-align: center;
-    padding-top: 500px;
+    padding-top: 400px;
 }
 
 .welcome .btn{
@@ -50,22 +50,16 @@ header{
 .title{
     color: white;
     font-family: system-ui, sans-serif;
-    font-weight:bold;
-}
-
-.title h1, .title h2{
-    margin: 20px;
-    color: white;
-    font-size: 80px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .title h2{
-    border-bottom: 12px white;
-}
-
-.title a{
-    padding: 28px;
+    margin: 20px 350px 0;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    border-bottom: 5px solid black;
+    border-color: white;
 }
 
 /*Nav Background color*/
@@ -73,7 +67,9 @@ nav{
     background-color: rgba(204, 21, 21, 0.473);
     overflow: hidden;
 }
+
 /*Nav Link style*/
+
 nav a{
     float: left;
     color: #f2f2f2;
