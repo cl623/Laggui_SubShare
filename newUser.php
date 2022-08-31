@@ -2,7 +2,7 @@
 <html>
     <head>
         <title> Create Account </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
 	<section>
@@ -10,8 +10,8 @@
 	    <h4>Create an Account to get started with SubShare!</h4>
             <form action="createlogin.php" method="post" id="signup">
                 <div class="form-field">
-                    <label for="user"> Username: </label>
-		    <input type="text" id="user" name="uname" placeholder="Username">
+                    <label for="uname"> Username: </label>
+		            <input type="text" id="uname" name="uname" placeholder="Username">
                     <alert></alert>
                 </div>
                 <div class="form-field">

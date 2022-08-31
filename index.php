@@ -10,7 +10,7 @@
         <button class="btn" href='home.php'>Get Started Now!</button>
     </div>
 </div>
-<div class="about">
+<div class="about col-1-4">
         <!-- split the div -->
     <div> <!-- left 20% -->
         <h3> About </h3>
@@ -21,7 +21,61 @@
     </div>
 </div>
 <div class='parallax2'>
-    <div>
+    <div class='demo col-1-1'>
+        <div class='table-display'>
+            <div>
+
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Hulu</th>
+                        <th>Netflix</th>
+                        <th>HBO Max</th>
+                        <th>etc.</th>
+                    </tr>
+                    <tr>
+                        <td>Me</td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Dan</td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Angela</td>
+                        <td></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Sean</td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Candice</td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="material-symbols-outlined"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class='table-display'>
+
+        </div>    
     </div>
 </div>
 <?php echo file_get_contents("html/footer.html"); ?>
