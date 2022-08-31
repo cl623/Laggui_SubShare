@@ -110,8 +110,17 @@ nav a:active{
     margin: 20px;
     border: 2px solid black;
     border-color: rgba(204, 21, 21, 0.473);
-    display: grid;
     background-color: rgba(233, 62, 62, 0.692);
+}
+
+.table-display table{
+    border-collapse: collapse;
+    border-style: hidden;
+    width: 100%;
+}
+
+.table-display table td{
+    border: 5px solid black;
 }
 
 .col-1-4{

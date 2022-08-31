@@ -24,54 +24,54 @@
     <div class='demo col-1-1'>
         <div class='table-display'>
             <div>
-
+                <p>View shared subscriptions within your family/friend group!<br>
+                Easily pick the subs that everyone wants to participate in: </p>
             </div>
-            <div>
-		<table>
-		    <tr>
-                        <th></th>
-                        <th>Hulu</th>
-                        <th>Netflix</th>
-                        <th>HBO Max</th>
-                        <th>etc.</th>
-                    </tr>
-                    <tr>
-                        <td>Me</td>
-                        <td><span class="material-icons">check</span></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Dan</td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                    </tr>
-                    <tr>
-                        <td>Angela</td>
-                        <td></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Sean</td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Candice</td>
-                        <td><i class="material-icons-outlined"></i></td>
-                        <td></td>
-                        <td></td>
-                        <td><i class="material-icons-outlined"></i></td>
-                    </tr>
-                </table>
-            </div>
+            <br>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Hulu</th>
+                    <th>Netflix</th>
+                    <th>HBO Max</th>
+                    <th>etc.</th>
+                </tr>
+                <tr>
+                    <td>Me</td>
+                    <td><span class="material-icons">check</span></td>
+                    <td><span class="material-icons">check</span></td>
+                    <td><span class="material-icons">check</span></td>
+                    <td><span class="material-icons">check</span></td>
+                </tr>
+                <tr>
+                    <td>Dan</td>
+                    <td><span class="material-icons">check</span></td>
+                    <td><span class="material-icons">check</span></td>
+                    <td></td>
+                    <td><span class="material-icons">check</span></td>
+                </tr>
+                <tr>
+                    <td>Angela</td>
+                    <td></td>
+                    <td><span class="material-icons">check</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Sean</td>
+                    <td><span class="material-icons">check</span></td>
+                    <td></td>
+                    <td><span class="material-icons">check</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Candice</td>
+                    <td><span class="material-icons">check</span></td>
+                    <td></td>
+                    <td></td>
+                    <td><span class="material-icons">check</span></td>
+                </tr>
+            </table>
         </div>
         <div class='table-display'>
 
