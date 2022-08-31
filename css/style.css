@@ -14,6 +14,10 @@ header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/welcome_1.jpg");
 }
 
+.parallax2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0 ,0.5)), url('../images/welcome_2.jpg');
+}
+
 .parallax1, .parallax2{
   /* Set a specific height */
   min-height: 700px;
