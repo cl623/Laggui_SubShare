@@ -37,35 +37,35 @@
                     <th>etc.</th>
                 </tr>
                 <tr>
-                    <td>Me</td>
+                    <th>Me</th>
                     <td><span class="material-icons">check</span></td>
                     <td><span class="material-icons">check</span></td>
                     <td><span class="material-icons">check</span></td>
                     <td><span class="material-icons">check</span></td>
                 </tr>
                 <tr>
-                    <td>Dan</td>
+                    <th>Dan</th>
                     <td><span class="material-icons">check</span></td>
                     <td><span class="material-icons">check</span></td>
                     <td></td>
                     <td><span class="material-icons">check</span></td>
                 </tr>
                 <tr>
-                    <td>Angela</td>
+                    <th>Angela</th>
                     <td></td>
                     <td><span class="material-icons">check</span></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Sean</td>
+                    <th>Sean</th>
                     <td><span class="material-icons">check</span></td>
                     <td></td>
                     <td><span class="material-icons">check</span></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>Candice</td>
+                    <th>Candice</th>
                     <td><span class="material-icons">check</span></td>
                     <td></td>
                     <td></td>
