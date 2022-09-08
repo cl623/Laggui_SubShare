@@ -5,13 +5,10 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
-        <header>
             <h1>ShareSub</h1>
             <h3>Welcome to ShareSub! Coordinate sharing subscription based platforms with your friends and family easily!</h3>
-        </header>
-        <div class="centerbox">
-            <main>
-                <section>
+        <div class="nav">
+                <div>
                     <h2><b>Login</b></h2>
                     <form action="performlogin.php" method="post">
                         <p>Username:</p>
@@ -23,8 +20,8 @@
                         <br>
                         <button type="submit"> Login </button>
                     </form>
-                </section>
-                <section>
+                </div>
+                <div>
                     <form action="newUser.php" method="post">
                         <p>New to SubShare?
                             <br>
@@ -32,13 +29,12 @@
                         </p>
                         <button href="newUser.php"> Sign Up </button>
                     </form>
-                </section>
-            </main>
-            <section>
+                </div>
+            <div>
                 <?php if(isset($_GET['error'])){ ?>
                     <p class="error"> <?php echo $_GET['error']; ?></p>
                 <?php } ?>
-            </section>
+            </div>
         </div>
     </body>
 </html>
