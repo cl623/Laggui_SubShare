@@ -69,6 +69,11 @@ header{
     border-color: white;
 }
 
+.title2{
+    color:rgb(238, 39, 39);
+    
+}
+
 /*Nav Background color*/
 nav{
     background-color: rgba(204, 21, 21, 0.473);
@@ -137,4 +142,11 @@ nav a:active{
 
 .col-1-1{
     grid-template-columns: 1fr 1fr;
+}
+
+.centerbox{
+    margin: auto;
+    border: 1px solid #BFBFBF;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    background-color: white;
 }
