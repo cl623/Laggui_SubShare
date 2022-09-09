@@ -5,12 +5,12 @@
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body>
-        <div>
-            <h1>ShareSub</h1>
+	<div>
+	    <h1>ShareSub</h1>
             <h3>Welcome to ShareSub! Coordinate sharing subscription based platforms with your friends and family easily!</h3>
         </div>
         <div class="centerbox">
-            <div>
+            <div class="login">
                 <h2><b>Login</b></h2>
                 <form action="performlogin.php" method="post">
                     <p>Username:</p>
