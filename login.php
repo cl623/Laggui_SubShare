@@ -4,8 +4,8 @@
         <title> Login </title>
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
-    <body>
-        <div class=login-body>
+    <body class="login-body">
+        <div>
             <div>
                 <h1>ShareSub</h1>
                 <h3>Welcome to ShareSub! Coordinate sharing subscription based platforms with your friends and family easily!</h3>
