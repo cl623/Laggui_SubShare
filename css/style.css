@@ -149,8 +149,9 @@ nav a:active{
     padding: 10px 10px 20px 10px;
     border: 1px solid #BFBFBF;
     background-color: white;
-    box-shadow: 10px 10px 5px #aaaaaa;
+    box-shadow: 5px 5px 2px #aaaaaa;
     margin: auto;
+    border-radius: 4px;
 }
 
 .login{
@@ -159,4 +160,8 @@ nav a:active{
 
 .login h2{
     text-align: center;
+}
+
+.login-body {
+    background-image: url('../images/VecteezyAutumn-Floral-BackgroundBK1120_generated');
 }
