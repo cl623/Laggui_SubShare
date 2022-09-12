@@ -11,10 +11,10 @@
                     <h2><b>Login</b></h2>
 		    <form action="performlogin.php" method="post">
 			<label for="uname"> Username: </label>
-                        <input type="text" name="uname">
-			<br>
-			<label for"password"> Password </label>
-                        <input type="text" name="password">
+                        <input type="text" name="uname"><span class="material-icons">question_mark</span>
+                        <br>
+                        <label for="password"> Password </label>
+                        <input type="text" name="password"><span class="material-icons">question_mark</span>
                         <br>
                         <br>
                         <button type="submit"> Login </button>

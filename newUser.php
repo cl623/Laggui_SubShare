@@ -12,22 +12,22 @@
                 <form action="createlogin.php" method="post" id="signup">
                     <div class="form-field">
                         <label for="uname"> Username: </label>
-                        <input type="text" id="uname" name="uname">
+                        <input type="text" id="uname" name="uname"><span class="material-icons">question_mark</span>
                         <alert></alert>
                     </div>
                     <div class="form-field">
                         <label for="pass"> Password (5 Characters minimum): </label>
-                        <input type="password" id="pass" name="password">
+                        <input type="password" id="pass" name="password"><span class="material-icons">question_mark</span>
                         <alert></alert>
                     </div>
                     <div class="form-field">
                         <label for="retype"> Retype Password: </label>
-                        <input type="password" id="retype"> 
+                        <input type="password" id="retype"> <span class="material-icons">question_mark</span>
                         <alert></alert>
                     </div>
                     <div class="form-field">
                         <label for="email"> Email Address: </label>
-                        <input type="text"  id="email" name="email">
+                        <input type="text"  id="email" name="email"><span class="material-icons">question_mark</span>
                         <alert></alert>
                     </div>
                     <button type="submit"> Create Account </button>
