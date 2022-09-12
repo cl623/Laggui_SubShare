@@ -310,3 +310,11 @@ nav a:active{
 .on-focus > input:focus + .tool-tip.slideIn{
 	z-index: 1;
 }
+
+.tipped{
+    position: relative; 
+    padding: 0px; 
+    margin: 10px auto; 
+    display:table; 
+    float: left
+}

@@ -11,25 +11,30 @@
                 <div class="login">
                     <h2><b>Login</b></h2>
                     <form action="performlogin.php" method="post">
-                        <label for="uname"> Username: </label>
+                        <label for="uname"> Username </label>
                         <input type="text" name="uname">
-			<br>
-			<div class="on-focus clearfix" style="position: relative; padding: 0px; margin: 10px auto; display:table; float: left">
-				<label for="password"> Password </label>
-				<input type="text" name="password">
-				<div class="tool-tip slideIn right">Atleast one of each of the following:
-					<ul>
-						<li>Special</li>
-						<li>Uppercase</li>
-						<li>Lowercase</li>
-						<li>Number</li>
-					</ul>
-				</div>
-			</div>
+                        <br>
+                        <div class="on-focus tipped">
+                            <label for="password"> Password </label>
+                            <input type="text" name="password">
+                            <div class="tool-tip slideIn right">Atleast one of each of the following:
+                                <ul>
+                                    <li>Special</li>
+                                    <li>Uppercase</li>
+                                    <li>Lowercase</li>
+                                    <li>Number</li>
+                                </ul>
+                            </div>
+                        </div>
                         <br>
                         <br>
-                        <button type="submit"> Login </button>
+                        <button type="submit">Log In</button>
                     </form>
+                    <div>
+                        <?php if(isset($_GET['error'])){ ?>
+                            <p class="error"> <?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
             <div class="centerbox">
@@ -41,11 +46,6 @@
                         </p>
                         <button href="newUser.php"> Sign Up </button>
                     </form>
-                </div>
-                <div>
-                    <?php if(isset($_GET['error'])){ ?>
-                        <p class="error"> <?php echo $_GET['error']; ?></p>
-                    <?php } ?>
                 </div>
             </div>
         </div>

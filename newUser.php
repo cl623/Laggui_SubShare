@@ -12,23 +12,34 @@
                 <h4>Create an Account to get started with SubShare!</h4>
                 <form action="createlogin.php" method="post" id="signup">
                     <div class="form-field">
-                        <label for="uname"> Username: </label>
-                        <input type="text" id="uname" name="uname"><span class="material-icons">question_mark</span>
+                        <label for="uname"> Username </label>
+                        <input type="text" id="uname" name="uname">
                         <alert></alert>
                     </div>
                     <div class="form-field">
-                        <label for="pass"> Password (5 Characters minimum): </label>
-                        <input type="password" id="pass" name="password"><span class="material-icons">question_mark</span>
+                        <label for="pass"> Password (5 Characters minimum) </label>
+                        <input type="password" id="pass" name="password">
+                        <div class="tipped">
+                            <span class="material-icons">question_mark</span>
+                            <div class="tool-tip slideIn right">Atleast one of each of the following:
+                                    <ul>
+                                        <li>Special</li>
+                                        <li>Uppercase</li>
+                                        <li>Lowercase</li>
+                                        <li>Number</li>
+                                    </ul>
+                            </div>
+                        </div>
                         <alert></alert>
                     </div>
                     <div class="form-field">
-                        <label for="retype"> Retype Password: </label>
-                        <input type="password" id="retype"> <span class="material-icons">question_mark</span>
+                        <label for="retype"> Re-Enter Password </label>
+                        <input type="password" id="retype">
                         <alert></alert>
                     </div>
                     <div class="form-field">
-                        <label for="email"> Email Address: </label>
-                        <input type="text"  id="email" name="email"><span class="material-icons">question_mark</span>
+                        <label for="email"> Email Address </label>
+                        <input type="text"  id="email" name="email">
                         <alert></alert>
                     </div>
                     <button type="submit"> Create Account </button>
