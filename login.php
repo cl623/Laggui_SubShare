@@ -13,10 +13,19 @@
                     <form action="performlogin.php" method="post">
                         <label for="uname"> Username: </label>
                         <input type="text" name="uname">
-                        <br>
-                        <label for="password"> Password </label>
-                        <input type="text" name="password"><span class="material-icons">question_mark</span>
-                        <div class="tool-tip slideIn right">Tool Tip</div>
+			<br>
+			<div class="on-focus clearfix" style="position: relative; padding: 0px; margin: 10px auto; display:table; float: left">
+				<label for="password"> Password </label>
+				<input type="text" name="password">
+				<div class="tool-tip slideIn right">Atleast one of each of the following:
+					<ul>
+						<li>Special</li>
+						<li>Uppercase</li>
+						<li>Lowercase</li>
+						<li>Number</li>
+					</ul>
+				</div>
+			</div>
                         <br>
                         <br>
                         <button type="submit"> Login </button>
