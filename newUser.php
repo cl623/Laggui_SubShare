@@ -2,7 +2,8 @@
 <html>
     <head>
         <title> Create Account </title>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body class=login-body>
         <div class="centerbox">

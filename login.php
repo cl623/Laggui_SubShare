@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Login </title>
+	<title> Login </title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
     <body class="login-body">
