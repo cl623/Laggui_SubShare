@@ -5,7 +5,6 @@ const confirmPasswordEl = document.querySelector('#retype');
 
 const form = document.querySelector('#signup');
 
-
 const checkUsername = () => {
 
     let valid = false;
@@ -122,7 +121,7 @@ const showSuccess = (input) => {
 
 form.addEventListener('submit', function (e) {
     // prevent the form from submitting
-    //e.preventDefault();
+    e.preventDefault();
 
 
     // validate forms
@@ -138,8 +137,8 @@ form.addEventListener('submit', function (e) {
 
     // submit to the server if the form is valid
     if (!isFormValid) {
-	//document.forms["signup"].submit();
-	e.preventDefault();
+	document.forms["signup"].submit();
+	//e.preventDefault();
     }
 });
 
@@ -174,3 +173,12 @@ form.addEventListener('input', debounce(function (e) {
             break;
     }
 }));
+
+function showPass(){
+    if (passwordEl.type ==="password"){
+        passwordEl.type = "text";
+    }
+    else{
+        passwordEl.type = "password";
+    }
+}

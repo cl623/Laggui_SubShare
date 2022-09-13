@@ -17,9 +17,9 @@
                         <alert></alert>
                     </div>
                     <div class="form-field">
-			<label for="pass"> Password </label>
-			<input type="password" id="pass" name="password">
-			<div class="tipped"><span class="material-icons">question_mark</span>
+                        <label for="pass"> Password </label>
+                        <div class="on-focus tipped">
+                            <input type="password" id="pass" name="password">
                             <div class="tool-tip slideIn right">Atleast one of each of the following:
                                     <ul>
                                         <li>Special</li>
@@ -29,6 +29,7 @@
                                     </ul>
                             </div>
                         </div>
+                        <a onclick="showPass()" ><span class="material-icons">visibility</span></a>
                         <alert></alert>
                     </div>
                     <div class="form-field">

@@ -9,12 +9,12 @@
     
     $uname = validate($_POST['uname']);
     $pass = validate($_POST['password']);
-    //$email = validate($_POST['email']);
+    $email = validate($_POST['email']);
     
     $data = [
 	'uname' => $uname,
 	'pass' => $pass,
-	//'email' => $email,
+	'email' => $email,
     ];
 
 //	header("Location: newUser.php?error=createlogin reached");
@@ -29,7 +29,7 @@
 //	exit();
     }
     catch(PDOException $error){
-        header("Location: newUser.php?error=Unable to create account:".$error->getMessage());
+        header("Location: newUser.php?error=Unable to connect to DB:".$error->getMessage());
         exit();
     }
     
