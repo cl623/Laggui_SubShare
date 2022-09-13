@@ -11,10 +11,12 @@
                 <h1>Sign Up</h1>
                 <h4>Create an Account to get started with SubShare!</h4>
                 <form action="createlogin.php" method="post" id="signup">
-                    <div class="form-field">
+		    <div class="form-field">
+			<div class="tipped">
                         <label for="uname"> Username </label>
                         <input type="text" id="uname" name="uname">
-                        <alert></alert>
+			<alert></alert>
+			</div>
                     </div>
                     <div class="form-field">
                         <label for="pass"> Password </label>
@@ -29,18 +31,22 @@
                                     </ul>
                             </div>
                         </div>
-                        <a onclick="showPass()" ><span class="material-icons">visibility</span></a>
+                        <a style="float:right;" onclick="showPass()" ><span class="material-icons">visibility</span></a>
                         <alert></alert>
                     </div>
-                    <div class="form-field">
+		    <div class="form-field">
+			<div class="tipped">
                         <label for="retype"> Re-Enter Password </label>
                         <input type="password" id="retype">
-                        <alert></alert>
+			<alert></alert>
+			</div>
                     </div>
-                    <div class="form-field">
+		    <div class="form-field">
+			<div class="tipped">
                         <label for="email"> Email Address </label>
                         <input type="text"  id="email" name="email">
-                        <alert></alert>
+			<alert></alert>
+			</div>
                     </div>
                     <button type="submit"> Create Account </button>
                 </form>
