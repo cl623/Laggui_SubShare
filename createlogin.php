@@ -20,7 +20,7 @@
 //	header("Location: newUser.php?error=createlogin reached");
 //	exit();
     try{
-        $sql = "INSERT INTO users (username, password) VALUES (:uname, :pass)";
+        $sql = "INSERT INTO users (username, password, email) VALUES (:uname, :pass, :email, 'YOUR NAME HERE')";
 
         $statement = $conn->prepare($sql);
 	$success = $statement->execute($data);

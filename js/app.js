@@ -1,4 +1,4 @@
-const usernameEl = document.querySelector('#user');
+const usernameEl = document.querySelector('#uname');
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#pass');
 const confirmPasswordEl = document.querySelector('#retype');
