@@ -31,7 +31,7 @@
                                     </ul>
                             </div>
                         </div>
-                        <a style="float:right;" onclick="showPass()" ><span class="material-icons">visibility</span></a>
+                        <a style="float: right; cursor: pointer;" onclick="showPass()" ><span class="material-icons">visibility</span></a>
                         <alert></alert>
                     </div>
 		    <div class="form-field">

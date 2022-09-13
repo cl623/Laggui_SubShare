@@ -136,6 +136,7 @@ nav a:active{
     height: 100px;
 }
 
+/*Define columns*/
 .col-1-4{
     grid-template-columns: 1fr 4fr;
 }
@@ -144,6 +145,7 @@ nav a:active{
     grid-template-columns: 1fr 1fr;
 }
 
+/*Centered boxes holding login elements for login and newUser*/
 .centerbox{
     width: 400px;
     padding: 10px 10px 20px 10px;
@@ -173,7 +175,7 @@ nav a:active{
     border: none;
     border-bottom: 1px solid rgb(227, 131, 131, 1);
     border-left: 1px solid rgb(227, 131, 131, 1);
-    width: 300px;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     background-color: #f3f3f4;
@@ -199,6 +201,7 @@ nav a:active{
     background-color: #04AA6D;
 }
 
+/*Floating tool-tip on hover of elements*/
 .tool-tip{
     color: #fff;
 	background-color: rgba( 0, 0, 0, .7);

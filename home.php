@@ -1,24 +1,30 @@
+<!-- TITLE REPLACE IN header.html-->
 <?php 
-session_start();
+    session_start();
 
-if(isset($_SESSION['username'])){
-    ?>
+    ob_start();
+    include("html/header.html");
+    $buffer=ob_getcontents();
+    ob_end_clean();
 
-    <!DOCTYPE html>
-    <html> 
-        <head>
-            <title> HOME </title>
-            <link rel="stylesheet" type="text/css" href="./css/style.css">
-        </head>
-        <body>
-	    <h1> Welcome back, <?= $_SESSION['username']?> </h1>
-            <a href="logout.php">Logout</a>
-        </body>
-    </html>
-    <?php
-}
-else{
-    header("Location: login.php");
-    exit();
-}
+    $buffer=str_replace("%TITLE%", "Homepage", $buffer);
+    echo $buffer;
 ?>
+<!-- CHANGE HEADER DEPENDING ON USER -->
+            <?if(isset($_SESSION['name']) && $_SESSION['name'] != 'YOUR NAME HERE'){?>
+	            <h1> Welcome back, <?= $_SESSION['name']?> </h1>
+
+                <?}elseif(isset($_SESSION['username'])){?>
+
+                <h1> Welcome back, <?= $_SESSION['username']?> </h1>   
+ 
+                    <?php
+                        }else{
+                            header("Location: login.php");
+                            exit(); 
+                        }?>
+                <a href="logout.php">Logout</a>
+
+<!-- INCLUDE FOOTER -->
+<?php include("html/footer.html"); ?>
+
