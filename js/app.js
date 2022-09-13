@@ -95,7 +95,7 @@ const isBetween = (length, min, max) => length < min || length > max ? false : t
 
 const showError = (input, message) => {
     // get the form-field element
-    const formField = input.parentElement;
+    const formField = input.parentElement.parentElement;
     // add the error class
     formField.classList.remove('success');
     formField.classList.add('error');
@@ -107,7 +107,7 @@ const showError = (input, message) => {
 
 const showSuccess = (input) => {
     // get the form-field element
-    const formField = input.parentElement;
+    const formField = input.parentElement.parentElement;
 
     // remove the error class
     formField.classList.remove('error');
@@ -121,7 +121,7 @@ const showSuccess = (input) => {
 
 form.addEventListener('submit', function (e) {
     // prevent the form from submitting
-    e.preventDefault();
+    //e.preventDefault();
 
 
     // validate forms
@@ -137,8 +137,8 @@ form.addEventListener('submit', function (e) {
 
     // submit to the server if the form is valid
     if (!isFormValid) {
-	document.forms["signup"].submit();
-	//e.preventDefault();
+	//document.forms["signup"].submit();
+	e.preventDefault();
     }
 });
 

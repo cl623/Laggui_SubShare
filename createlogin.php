@@ -15,18 +15,19 @@
 	'uname' => $uname,
 	'pass' => $pass,
 	'email' => $email,
+	'name' => 'YOUR NAME HERE',
     ];
 
 //	header("Location: newUser.php?error=createlogin reached");
 //	exit();
     try{
-        $sql = "INSERT INTO users (username, password, email) VALUES (:uname, :pass, :email, 'YOUR NAME HERE')";
+	    $sql = "INSERT INTO users (username, password, email, name) VALUES (:uname, :pass, :email, :name)";
 
         $statement = $conn->prepare($sql);
 	$success = $statement->execute($data);
 
-//	header("Location: newUser.php?error=inserted to DB");
-//	exit();
+	//header("Location: newUser.php?error=inserted to DB");
+	//exit();
     }
     catch(PDOException $error){
         header("Location: newUser.php?error=Unable to connect to DB:".$error->getMessage());
