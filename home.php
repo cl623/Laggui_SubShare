@@ -1,14 +1,9 @@
-<!-- TITLE REPLACE IN header.html-->
+<!-- TITLE REPLACE IN header.php-->
 <?php 
     session_start();
 
-    ob_start();
-    include("html/header.html");
-    $buffer=ob_getcontents();
-    ob_end_clean();
-
-    $buffer=str_replace("%TITLE%", "Homepage", $buffer);
-    echo $buffer;
+    $title = "Homepage"
+    include("common/header.html");
 ?>
 <!-- CHANGE HEADER DEPENDING ON USER -->
             <?if(isset($_SESSION['name']) && $_SESSION['name'] != 'YOUR NAME HERE'){?>
@@ -20,11 +15,11 @@
  
                     <?php
                         }else{
-                            header("Location: login.php");
+                            header("Location: logout.php");
                             exit(); 
                         }?>
                 <a href="logout.php">Logout</a>
 
 <!-- INCLUDE FOOTER -->
-<?php include("html/footer.html"); ?>
+<?php include("common/footer.php"); ?>
 

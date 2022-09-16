@@ -1,4 +1,4 @@
-<?php echo file_get_contents("html/header.html"); ?>
+<?php include("common/header.php"); ?>
 
 <div class='parallax1'>
     <div class='welcome'>
@@ -78,4 +78,4 @@
         </div>    
     </div>
 </div>
-<?php echo file_get_contents("html/footer.html"); ?>
+<?php include("common/footer.php"); ?>
