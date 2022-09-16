@@ -2,8 +2,8 @@
 <?php 
     session_start();
 
-    $title = "Homepage"
-    include("common/header.html");
+    $title = "Homepage";
+    include("common/header.php");
 ?>
 <!-- CHANGE HEADER DEPENDING ON USER -->
             <?php if(isset($_SESSION['name']) && $_SESSION['name'] != 'YOUR NAME HERE'){?>
@@ -21,9 +21,6 @@
                 <a href="logout.php">Logout</a>
 
 <!-- INCLUDE FOOTER -->
-<<<<<<< Updated upstream
+
 <?php include("common/footer.php"); ?>
-=======
-<?php echo file_get_contents("html/footer.html"); ?>
->>>>>>> Stashed changes
 
