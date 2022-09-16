@@ -176,7 +176,7 @@ nav a:active{
     border-bottom: 1px solid rgb(227, 131, 131, 1);
     border-left: 1px solid rgb(227, 131, 131, 1);
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 0px;
     margin: 8px 0;
     background-color: #f3f3f4;
     border-radius: 4px;
@@ -199,6 +199,24 @@ nav a:active{
 .login-body button[type=submit]{
     color: white;
     background-color: #04AA6D;
+}
+
+.form-field{
+    padding: 10px 0px;
+
+}
+
+alert{
+   color: red;
+   font-family: Arial, sans-serif;
+}
+
+.success{
+   border-color: green;
+}
+
+.error{
+   border-color: red;
 }
 
 /*Floating tool-tip on hover of elements*/
@@ -315,8 +333,15 @@ nav a:active{
 
 .tipped{
     position: relative; 
-    padding: 0px; 
-    margin: 10px auto; 
+    padding: 0px;  
     display:table; 
     float: left;
+}
+
+.passwordButton{
+   float:right;
+   cursor:pointer;
+   margin: 0px 0px 0px 280px;
+   px;
+   height: 20px;
 }

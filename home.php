@@ -6,10 +6,10 @@
     include("common/header.html");
 ?>
 <!-- CHANGE HEADER DEPENDING ON USER -->
-            <?if(isset($_SESSION['name']) && $_SESSION['name'] != 'YOUR NAME HERE'){?>
+            <?php if(isset($_SESSION['name']) && $_SESSION['name'] != 'YOUR NAME HERE'){?>
 	            <h1> Welcome back, <?= $_SESSION['name']?> </h1>
 
-                <?}elseif(isset($_SESSION['username'])){?>
+                <?php }elseif(isset($_SESSION['username'])){?>
 
                 <h1> Welcome back, <?= $_SESSION['username']?> </h1>   
  
@@ -21,5 +21,9 @@
                 <a href="logout.php">Logout</a>
 
 <!-- INCLUDE FOOTER -->
+<<<<<<< Updated upstream
 <?php include("common/footer.php"); ?>
+=======
+<?php echo file_get_contents("html/footer.html"); ?>
+>>>>>>> Stashed changes
 

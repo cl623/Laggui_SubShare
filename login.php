@@ -13,20 +13,11 @@
                     <form action="performlogin.php" method="post">
                         <label for="uname"> Username </label>
                         <input type="text" name="uname">
-                        <br>
-                        <div class="on-focus tipped">
-                            <label for="password"> Password </label>
-                            <input type="text" name="password">
-                            <div class="tool-tip slideIn right">Atleast one of each of the following:
-                                <ul>
-                                    <li>Special</li>
-                                    <li>Uppercase</li>
-                                    <li>Lowercase</li>
-                                    <li>Number</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
+			<br>
+                        <label for="password"> Password </label>
+			<a class="passwordButton" onclick="showPass()"><span id="show" class="material-icons">visibility</span></a>
+			<input id="pass" type="password" name="password">
+			<br>
                         <br>
                         <button type="submit">Log In</button>
                     </form>
@@ -48,6 +39,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+	</div>
+	<script src="js/app.js"></script>
     </body>
 </html>

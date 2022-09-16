@@ -10,12 +10,13 @@
     $uname = validate($_POST['uname']);
     $pass = validate($_POST['password']);
     $email = validate($_POST['email']);
-    
+    $name = 'YOUR NAME HERE';
+
     $data = [
 	'uname' => $uname,
 	'pass' => $pass,
 	'email' => $email,
-	'name' => 'YOUR NAME HERE',
+	'name' => $name,
     ];
 
 //	header("Location: newUser.php?error=createlogin reached");

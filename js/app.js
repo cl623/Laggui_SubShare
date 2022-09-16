@@ -50,7 +50,7 @@ const checkPassword = () => {
     if (!isRequired(password)) {
         showError(passwordEl, 'Password cannot be blank.');
     } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
+        showError(passwordEl, 'Password must have at least <strong>8 characters</strong> that includes at least <strong>1 lowercase</strong> character, <strong>1 uppercase</strong> characters, <strong>1 number</strong>, and <strong>1 special</strong> character (!@#$%^&*)');
     } else {
         showSuccess(passwordEl);
         valid = true;
@@ -175,10 +175,13 @@ form.addEventListener('input', debounce(function (e) {
 }));
 
 function showPass(){
+    let showEl = document.querySelector("#show");
     if (passwordEl.type ==="password"){
         passwordEl.type = "text";
+	showEl.innerHTML = "visibility_off";
     }
     else{
         passwordEl.type = "password";
+	showEl.innerHTML = "visibility";
     }
 }
