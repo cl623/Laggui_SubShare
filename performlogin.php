@@ -46,7 +46,7 @@ if($rows === 1){
     if($row['username'] === $uname && $row['password'] === $pass){
         echo "Redirecting...";
         $_SESSION['username'] = $row['username'];
-//	$_SESSION['name'] = $row['name'];
+        $_SESSION['name'] = $row['name'];
         $_SESSION['id'] = $row['id'];
         header("Location: home.php");
         exit();

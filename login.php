@@ -13,11 +13,13 @@
                     <form action="performlogin.php" method="post">
                         <label for="uname"> Username </label>
                         <input type="text" name="uname">
-			<br>
+			            <br>
                         <label for="password"> Password </label>
-			<a class="passwordButton" onclick="showPass()"><span id="show" class="material-icons">visibility</span></a>
-			<input id="pass" type="password" name="password">
-			<br>
+                        <a class="passwordButton" onclick="showPass()">
+                            <span id="show" class="material-icons">visibility</span>
+                        </a>
+                        <input id="pass" type="password" name="password">
+                        <br>
                         <br>
                         <button type="submit">Log In</button>
                     </form>
