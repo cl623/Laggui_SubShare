@@ -64,8 +64,18 @@
                     <button type="submit"> Create Account </button>
                 </form>
             </div>
-        </div>
-	<alert></alert>
+	</div>
+	<div class="centerbox">
+	    <div>
+ 	        <form action="login.php" method="post">
+		    <p> Already have an account?
+			<br>
+			Log in now!
+		    </p>
+		    <button href="login.php"> Log-in Here</button>
+   	        </form>
+	    </div>
+	</div>
 	<p class="error"> <?php echo $_GET['error']; ?></p>
         <script src="js/app.js"></script>
     </body>
