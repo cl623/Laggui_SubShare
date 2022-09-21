@@ -10,7 +10,7 @@
     $uname = validate($_POST['uname']);
     $pass = validate($_POST['password']);
     $email = validate($_POST['email']);
-    $name = 'YOUR NAME HERE';
+    $name = validate($_POST['name']);
 
     $data = [
 	'uname' => $uname,
@@ -25,7 +25,8 @@
 	    $sql = "INSERT INTO users (username, password, email, name) VALUES (:uname, :pass, :email, :name)";
 
         $statement = $conn->prepare($sql);
-	$success = $statement->execute($data);
+	    $success = $statement->execute($data);
+        $lastId = $conn->lastInsertId();
 
 	//header("Location: newUser.php?error=inserted to DB");
 	//exit();
@@ -38,8 +39,8 @@
     if($success){
         echo "Redirecting...";
         $_SESSION['username'] = $uname;
-//        $_SESSION['name'] = $name;	
-//        $_SESSION['id'] = $id;
+        $_SESSION['name'] = $name;	
+        $_SESSION['id'] = $lastId;
         header("Location: home.php");
 	
 //	header("Location: newUser.php?error=Connected");
