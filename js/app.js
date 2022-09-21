@@ -188,12 +188,12 @@ function showPass(){
 
 // Open and close Modals
 function openModal(){
-    document.getElementById("widget").style.display = "block";
+    document.getElementById("myModal").style.display = "block";
 
 }
 
 function closeModal(){
-    document.getElementById("widget").style.display = "none"
+    document.getElementById("myModal").style.display = "none"
 }
 
 window.onclick = function(event){
