@@ -425,3 +425,16 @@ alert{
     from {opacity: 0} 
     to {opacity: 1}
   }
+
+
+  .main-content{
+    border-color:rgba(221, 149, 149, 1);
+    height: 100%;
+    background-color: #fff;
+    padding: 12px;
+    margin: 40px;
+  }
+
+  .contents{
+    background-color: #f5f7fa;
+  }
