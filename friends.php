@@ -10,7 +10,7 @@
 <?php //echo "<p>".$_SESSION['id']."</p>"?>
 
     <h3>Friends</h3>
-    <a>Add friends<span class="material-icons">add</span></a>
+    <a onclick="openModal()">Add a friend<span class="material-icons">add</span></a>
 
     <table id="friends">
         <tr>
@@ -46,5 +46,24 @@
     ?>
     </table>
     <p class="error"><?php echo $_GET['error'];?></p>
+        <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <script src="js/app.js"></script>
 <?php include("common/footer.php"); ?>
 

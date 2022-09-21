@@ -185,3 +185,19 @@ function showPass(){
 	showEl.innerHTML = "visibility";
     }
 }
+
+// Open and close Modals
+function openModal(){
+    document.getElementById("widget").style.display = "block";
+
+}
+
+function closeModal(){
+    document.getElementById("widget").style.display = "none"
+}
+
+window.onclick = function(event){
+    if(event.target === modal){
+        modal.style.display = "none";
+    }
+}
