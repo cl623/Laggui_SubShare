@@ -19,7 +19,7 @@
                 </tr>
                 <?php 
                 try{
-                $sql = "SELECT users.name, users.username FROM users WHERE users.id IN ((SELECT requesterID FROM friendship WHERE addresseeID = ?) UNION (SELECT addresseeID FROM friendship WHERE requesterID = ?))";
+                $sql = "SELECT users.name, users.username FROM users WHERE users.id IN ((SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'a') UNION (SELECT addresseeID FROM friendship WHERE requesterID = ? AND friendshipstatus = 'a'))";
             
             // $sql = "SELECT requesterID FROM friendship WHERE addresseeID = ? UNION SELECT addresseeID FROM friendship WHERE requesterID =?";
                     $statement = $conn->prepare($sql);
@@ -54,19 +54,22 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Modal Header</h2>
+                <h2>Add a friend</h2>
             </div>
             <div class="modal-body">
-                <p>Some text in the Modal Body</p>
-                <p>Some other text...</p>
+                <form id="addFriends" action="searchusername.php" class="searchbox" method="post">
+                    <input type="text" name="searchuname" id="searchuname" placeholder="Search username...">
+                    <button type="submit"><span class="material-icons">search</span><button>
+                </form>
             </div>
             <div class="modal-footer">
-                <h3>Modal Footer</h3>
+                <span class="error"><?php echo $_GET['error']?></span>
             </div>
         </div>
     </div>
     <!-- End Modal -->
 
     <script src="js/modal.js"></script>
+    <script src="js/friends.js"></script>
 <?php include("common/footer.php"); ?>
 

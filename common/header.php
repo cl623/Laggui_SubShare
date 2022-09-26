@@ -5,6 +5,7 @@
 	    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="../css/icons.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script type="text/javascript" src="jquery-1.3.2.js"> </script>
         <title><?php echo $title;?></title>
     </head>
     <body>
