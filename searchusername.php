@@ -1,6 +1,6 @@
 <?php 
 
-    $fail = "Unsuccessful. Make sure their phone number, email, or username is correct.";
+    /*$fail = "Unsuccessful. Make sure their phone number, email, or username is correct.";
     $phonePattern = "/^[0-9]{10,11}+$/"; //10 - 11 numbers in cases where users include country code;
     $usernamePattern = "/^[a-z0-9]*$/i";
 
@@ -18,9 +18,10 @@
             return "SELECT name, id FROM users WHERE username = $data";
         }
     }
-
+     */
     try{
-            $sql = validate($_POST['searchuname']);
+	    $sql = "SELECT * FROM users"
+	    //$sql = validate($_POST['searchuname']);
             $statement = $conn->prepare($sql);
             $success = $statement->execute();
     }
@@ -34,7 +35,7 @@
         echo json_encode($data);
     }
     else{
-        echo $fail;
+        echo json_encode($fail);
     }
 
     //$sql = "INSERT INTO friendship (requesterID, addresseeID) VALUES ($_POST['id'], (SELECT id FROM users WHERE username = $_POST['username']))"

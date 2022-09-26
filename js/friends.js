@@ -1,5 +1,5 @@
 
-$("#addFriends").on("submit", function(e){
+/*$("#addFriends").on("submit", function(e){
     e.preventDefault();
     $.ajax({
         url: "searchusername.php",
@@ -13,4 +13,16 @@ $("#addFriends").on("submit", function(e){
             $("#postData").html("Error: " + response);
         }
     });
+});*/
+$("#addfriends").on("submit",function(e){
+	e.preventDefault();
+	$.ajax({
+		type:"POST",
+		url: "searchusername.php",
+		data:"JDoe1",
+		cache: false,
+		success: function(response){
+		$("#postData").html(response);
+		}
+	});
 });
