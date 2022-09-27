@@ -1,5 +1,7 @@
 <?php 
 
+    echo json_encode($_POST['searchuname']);
+
     /*$fail = "Unsuccessful. Make sure their phone number, email, or username is correct.";
     $phonePattern = "/^[0-9]{10,11}+$/"; //10 - 11 numbers in cases where users include country code;
     $usernamePattern = "/^[a-z0-9]*$/i";
@@ -18,7 +20,7 @@
             return "SELECT name, id FROM users WHERE username = $data";
         }
     }
-     */
+     
     try{
 	    $sql = "SELECT * FROM users"
 	    //$sql = validate($_POST['searchuname']);
@@ -37,7 +39,7 @@
     else{
         echo json_encode($fail);
     }
-
+    */
     //$sql = "INSERT INTO friendship (requesterID, addresseeID) VALUES ($_POST['id'], (SELECT id FROM users WHERE username = $_POST['username']))"
 
 ?>

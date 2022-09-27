@@ -19,7 +19,7 @@ $("#addfriends").on("submit",function(e){
 	$.ajax({
 		type:"POST",
 		url: "../searchusername.php",
-		data:"JDoe1",
+		data: "CLAGGUI",
 		cache: false,
 		success: function(response){
 		$("#postData").html(response);

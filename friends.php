@@ -64,6 +64,7 @@
             </div>
             <div class="modal-footer">
                 <span class="error"><?php echo $_GET['error']?></span>
+                <span id="postData"></span>
             </div>
         </div>
     </div>
