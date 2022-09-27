@@ -18,7 +18,7 @@ $("#addfriends").on("submit",function(e){
 	e.preventDefault();
 	$.ajax({
 		type:"POST",
-		url: "searchusername.php",
+		url: "../searchusername.php",
 		data:"JDoe1",
 		cache: false,
 		success: function(response){
