@@ -12,14 +12,42 @@
 
     <div class="main-content">
         <a onclick="openModal()">Add a friend<span class="material-icons">add</span></a>
-            <table id="friends" class="table-friends">
-                <tr>
-                    <th>Name</th>
-                    <th>Username</th>
-                </tr>
+        <table id="pendingFriends" class="table-friends">
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Action</th>
+            </tr>
+            <?php
+                try{
+                    $sql = "SELECT name, username FROM users WHERE id IN (SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'p')";
+                    $statement = $conn->prepare($sql);
+                    $success = $statement->execute($_SESSION['id']);
+                }
+                catch(PDOException $error){
+                    header("Location: friends.php?error=Unable to retrieve incoming friend requests: ".$error->getMessage());
+                    exit();
+                }
+                if($success){
+                    $data = $statement->fetchAll();
+                    foreach($data as $row){
+                        echo "<tr>";
+                        echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td><td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this.data-friendName)'>add</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this.data-friendName)'>block</span></td>";
+                        echo "</tr>"
+                    }
+                }
+                else{
+                    echo "<tr><td>fail</td></tr>";
+                }
+            ?>
+        </table>
+        <table id="friends" class="table-friends">
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+            </tr>
 
-                <?php 
-
+            <?php 
                 //   PHP script to retrieve friendslist.
                 try{
                     $sql = "SELECT users.name, users.username FROM users WHERE users.id IN ((SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'a') UNION (SELECT addresseeID FROM friendship WHERE requesterID = ? AND friendshipstatus = 'a'))";
@@ -30,22 +58,20 @@
                     header("Location: friends.php?error=Unable to connect to DB:".$error->getMessage());
                     exit();
                 }
-                
+                //   If connection and query are successful do:
                 if($success){
                     $data = $statement->fetchAll();
-
                     foreach($data as $row){
                         echo "<tr>";
                         echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td>";
                         echo "</tr>";
+                    }
                 }
-            //	echo "<tr><td>".var_dump($data)."</td></tr>";
-            }
-            else{
-            echo "<tr><td>fail</td></tr>";
-            }
+                else{
+                    echo "<tr><td>fail</td></tr>";
+                }
             ?>
-            </table>
+        </table>
         </div>
     </div>
     <p class="error"><?php echo $_GET['error'];?></p>

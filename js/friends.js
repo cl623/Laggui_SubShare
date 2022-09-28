@@ -27,3 +27,11 @@ function addFriend(){
         }
     });
 }
+
+function acceptRequest(element){
+    alert(element.attr("data-friendName"));
+}
+
+function denyRequest(element){
+    alert(element.attr("data-friendName"));
+}
