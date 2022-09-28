@@ -51,12 +51,14 @@
         exit();
     }
         
-    if($success){
+    if($success && ($statement->rowCount() > 0)){
         $result = $statement->fetchAll();
         echo json_encode($result);
+        exit()
     }
     else{
         echo json_encode($fail);
+        exit();
     }
     //return();
 
