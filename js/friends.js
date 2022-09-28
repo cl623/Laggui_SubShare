@@ -19,7 +19,7 @@ $("#addFriends").submit(function(e){
 	$.ajax({
 		type:"POST",
 		url: "../searchusername.php",
-		data: {data: JSON.stringify($("#searchuname").val())},
+		data: {data: JSON.stringify($("#searchuname").val()), id: $_SESSION['id']},
 		cache: false,
 		success: function(response){
 		$("#postData").html(response);
