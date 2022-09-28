@@ -14,7 +14,7 @@
 
         //  Trim leading && trailing whitespaces;
         $data = trim($data);
-
+	global $fail;
         //  Check if user searched by phone number. 
         //  (xxx)-xxx-xxx;
         if(preg_match('/^\([0-9]{3}\)-[0-9]{3}-[0-9]{4}$',$data)){
@@ -42,7 +42,7 @@
     }
     //  Connect to DB and attempt Query
     try{
-	        $sql = validate($d, $id);
+	    $sql = validate($d, $id);
             $statement = $conn->prepare($sql);
             $success = $statement->execute();
     }
@@ -54,7 +54,7 @@
     if($success && ($statement->rowCount() > 0)){
         $result = $statement->fetchAll();
         echo json_encode($result);
-        exit()
+        exit();
     }
     else{
         echo json_encode($fail);
