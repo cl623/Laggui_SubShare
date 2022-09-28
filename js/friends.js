@@ -14,12 +14,12 @@
         }
     });
 });*/
-$("#addfriends").on("submit",function(e){
+$("#addFriends").submit(function(e){
 	e.preventDefault();
 	$.ajax({
 		type:"POST",
 		url: "../searchusername.php",
-		data: "CLAGGUI",
+		data: {data: JSON.stringify($("#searchuname").val())},
 		cache: false,
 		success: function(response){
 		$("#postData").html(response);

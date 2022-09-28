@@ -1,11 +1,13 @@
+let modal = document.getElementById("myModal");
+
 // Open and close Modals
 function openModal(){
-    document.getElementById("myModal").style.display = "block";
+    modal.style.display = "block";
 
 }
 
 function closeModal(){
-    document.getElementById("myModal").style.display = "none"
+    modal.style.display = "none";
 }
 
 window.onclick = function(event){
