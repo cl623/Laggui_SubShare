@@ -17,11 +17,12 @@
                     <th>Name</th>
                     <th>Username</th>
                 </tr>
+
                 <?php 
+
+                //   PHP script to retrieve friendslist.
                 try{
-                $sql = "SELECT users.name, users.username FROM users WHERE users.id IN ((SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'a') UNION (SELECT addresseeID FROM friendship WHERE requesterID = ? AND friendshipstatus = 'a'))";
-            
-            // $sql = "SELECT requesterID FROM friendship WHERE addresseeID = ? UNION SELECT addresseeID FROM friendship WHERE requesterID =?";
+                    $sql = "SELECT users.name, users.username FROM users WHERE users.id IN ((SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'a') UNION (SELECT addresseeID FROM friendship WHERE requesterID = ? AND friendshipstatus = 'a'))";
                     $statement = $conn->prepare($sql);
                     $success = $statement->execute(array($_SESSION['id'], $_SESSION['id']));
                 }
@@ -71,23 +72,7 @@
     <!-- End Modal -->
 
     <script src="js/modal.js"></script>
-
-    <script>
-        $("#addFriends").submit(function(e){
-            e.preventDefault();
-            $.ajax({
-                type:"POST",
-                url: "../searchusername.php",
-                data: {data: JSON.stringify($("#searchuname").val())
-                    /*, id: <?php// echo json_encode($_SESSION['id'])?>*/
-                },
-                cache: false,
-                success: function(response){
-                $("#postData").html(response);
-                }
-            });
-        });
-    </script>
+    <script src="js/friends.js"></script>
 
 <?php include("common/footer.php"); ?>
 

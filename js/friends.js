@@ -1,28 +1,27 @@
+//   Run PHP script searchusername.php on form submit (form)
 
-/*$("#addFriends").on("submit", function(e){
+$("#addFriends").submit(function(e){
     e.preventDefault();
     $.ajax({
-        url: "searchusername.php",
-        type: "POST",
-        data: $(this).serialize(),
+        type:"POST",
+        url: "../searchusername.php",
+        data: {data: JSON.stringify($("#searchuname").val())},
+        cache: false,
         success: function(response){
-            //Do something with the returned data. Let the user add the user after successfully searching them up.
             $("#postData").html(response);
-        },
-        error: function(response){
-            $("#postData").html("Error: " + response);
         }
     });
-});*/
-$("#addFriends").submit(function(e){
-	e.preventDefault();
-	$.ajax({
-		type:"POST",
-		url: "../searchusername.php",
-		data: {data: JSON.stringify($("#searchuname").val()), id: <?php echo json_encode($_SESSION['id'])?>},
-		cache: false,
-		success: function(response){
-		$("#postData").html(response);
-		}
-	});
 });
+
+//   Run PHP script addFriend.php on button click (username)
+function addFriend(username){
+    $.ajax({
+        type: "POST",
+        url: "../addFriend.php",
+        data: {uname: username},
+        cache: false,
+        success: function(response){
+            $("#postData").html(response);
+        }
+    });
+}
