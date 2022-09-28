@@ -1,8 +1,10 @@
 <?php 
 	require "db_conn.php";
+    session_start();
 
+    $id = $_SESSION['id'];
     $d = json_decode($_POST['data']);
-    $id = json_decode($_POST['id']);
+    //$id = json_decode($_POST['id']);
 
     //Default Fail response.
     $fail = "Unsuccessful. Make sure their phone number, email, or username is correct.";
@@ -57,7 +59,7 @@
         echo json_encode($fail);
     }
     //return();
-    
+
     //$sql = "INSERT INTO friendship (requesterID, addresseeID) VALUES ($_POST['id'], (SELECT id FROM users WHERE username = $_POST['username']))"
 
 ?>

@@ -78,7 +78,9 @@
             $.ajax({
                 type:"POST",
                 url: "../searchusername.php",
-                data: {data: JSON.stringify($("#searchuname").val()), id: <?php echo json_encode($_SESSION['id'])?>},
+                data: {data: JSON.stringify($("#searchuname").val())
+                    /*, id: <?php// echo json_encode($_SESSION['id'])?>*/
+                },
                 cache: false,
                 success: function(response){
                 $("#postData").html(response);
@@ -86,6 +88,6 @@
             });
         });
     </script>
-    
+
 <?php include("common/footer.php"); ?>
 
