@@ -14,11 +14,13 @@ $("#addFriends").submit(function(e){
 });
 
 //   Run PHP script addFriend.php on button click (username)
-function addFriend(username){
-    $.ajax({
+function addFriend(){
+	var username = $("#friend").attr("data-friendName");
+    	alert(username);
+	$.ajax({
         type: "POST",
         url: "../addFriend.php",
-        data: {uname: username},
+        data: {uname: JSON.stringify(username)},
         cache: false,
         success: function(response){
             $("#postData").html(response);
