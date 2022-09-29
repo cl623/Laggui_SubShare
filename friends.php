@@ -33,7 +33,9 @@
                     $data = $statement->fetchAll();
                     foreach($data as $row){
                         echo "<tr>";
-                        echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td><td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this)'>add</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this)'>block</span></td>";
+                        echo "<td>".$row['name']."</td>";
+                        echo "<td><span class='tableUserName'>".$row['username']."</span></td>";
+                        echo "<td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this)'>add</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this)'>block</span></td>";
                         echo "</tr>";
                     }
                 }

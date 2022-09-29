@@ -29,29 +29,49 @@ function addFriend(){
 }
 
 function acceptRequest(element){
-    alert("Accepted "+ element.getAttribute("data-friendName"));
+    element.innerHTML("<div class='loader small-loader'></div>");
     var username = element.getAttribute("data-friendName");
     $.ajax({
-	type: "POST",
-	url: "../pendingRequests.php",
-	data: {action: 'add', uname: JSON.stringify(username)},
-	cache: false,
-	success: function(response){
-	    $("#pendingData").html(response);
-	}
+        type: "POST",
+        url: "../pendingRequests.php",
+        data: {action: 'add', uname: JSON.stringify(username)},
+        cache: false,
+        success: function(response){
+            if(response == "Success"){
+                alert(response);
+                location.reload();
+            }
+            else if(response == "Fail"){
+                alert(reponse);
+                location.reload();
+            }
+	    },
+        error: function(response){
+            element.innerHTML("add");
+        }
     });
 }
 
 function denyRequest(element){
-    alert("Denied "+element.getAttribute("data-friendName"));
+    element.innerHTML("<div class='loader small-loader'></div>");
     var username = element.getAttribute("data-friendName");
     $.ajax({
         type: "POST",
-	url: "../pendingRequests.php",
-	data: {action: 'deny', uname: JSON.stringify(username)},
-	cache: false,
-	success: function(response){
-	    $("#pendingData").html(response);
-	}
+        url: "../pendingRequests.php",
+        data: {action: 'deny', uname: JSON.stringify(username)},
+        cache: false,
+        success: function(response){
+            if(response == "Blocked"){
+                alert(response);
+                location.reload();
+            }
+            else if(response == "Fail"){
+                alert(reponse);
+                location.reload();
+            }
+        },
+        error: function(response){
+            element.innerHTML("block");
+        }
     });
 }

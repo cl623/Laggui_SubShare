@@ -1,1 +1,9 @@
-https://github.com/cl623/ShareSub.git
+Subshare
+
+-----------------------------------------------------------------------------------------------------
+
+Created by Christian Laggui
+claggui27@gmail.com
+(201) 932-5364
+
+Feel free to contact me regarding any questions or suggestions!
