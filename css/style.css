@@ -144,21 +144,32 @@ nav a:active{
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     width: fill-available;
     padding: 12px;
+    border-collapse: collapse;
+}
+
+.table-friends th, .table-friends td{
+    text-align: left;
     border: 1px solid rgb(150, 143, 143);
+    padding: 8px;
 }
 
 .table-friends th{
-    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: rgb(197, 160, 90);
+    background-color: rgb(206, 186, 151);
 }
 
 .table-friends .friendRow:hover{
-    box-shadow: 10px 5px 5px wheat;
+    box-shadow: 10px 0px 5px wheat;
+    background-color: #ddd;
 }
 
-.friendRow{
-    padding: 3px;
-    border: 1px solid rgb(189, 176, 176);
+.table-friends tr: nth-child(even){
+    background-color: rgb(206, 186, 151);
 }
+
+
 
 /*Define columns*/
 .col-1-4{
