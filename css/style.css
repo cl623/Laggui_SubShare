@@ -155,9 +155,11 @@ nav a:active{
     box-shadow: 10px 5px 5px wheat;
 }
 
-.table-friends .friendRow{
+.friendRow{
+    padding: 3px;
     border: 1px solid rgb(189, 176, 176);
 }
+
 /*Define columns*/
 .col-1-4{
     grid-template-columns: 1fr 4fr;

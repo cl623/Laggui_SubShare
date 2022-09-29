@@ -31,7 +31,7 @@
                 if($success){
                     $data = $statement->fetchAll();
                     foreach($data as $row){
-                        echo "<tr>";
+                        echo "<tr class='friendRow'>";
                         echo "<td>".$row['name']."</td>";
                         echo "<td><span class='tableUserName'>".$row['username']."</span></td>";
                         echo "<td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this)'>person_add_alt_1</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this)'>block</span></td>";
@@ -70,10 +70,10 @@
                             echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td>";
                             echo "<td>";
                                 echo "<div data-friendName='".$row['username']."' class='dropdown'>";
-                                    echo "<button onclick='listFriendActions(\"".$row['uname']."Dropdown\")' class='dropbtn'>";
+                                    echo "<button onclick='listFriendActions(\"".$row['username']."Dropdown\")' class='dropbtn'>";
                                         echo "<span class='material-icons'>view_headline</span>";
                                     echo "</button>";
-                                    echo "<div id='".$row['uname']."Dropdown' class='dropdown-content'>";
+                                    echo "<div id='".$row['username']."Dropdown' class='dropdown-content'>";
                                         //echo "<a href='".$row['uname']."/profile'>View Profile</a>";
                                         //echo "<a href='".$row['uname']."/payments'>Pay</a>";
                                         echo "<a onclick='inviteToGroup(\"".$row['uname']."\")'><span class='material-icons'>playlist_add_circle</span>Invite to Group</a>";
