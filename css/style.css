@@ -138,11 +138,26 @@ nav a:active{
 }
 
 .table-friends{
-    width: auto;
+    margin: 12px;
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
     padding: 12px;
     border: 1px solid rgb(150, 143, 143);
 }
 
+.table-friends th{
+    text-align: left;
+}
+
+.table-friends tr:hover{
+    box-shadow: 10px 5px 5px wheat;
+}
+
+.table-friends td{
+    border: 1px solid rgb(189, 176, 176);
+}
 /*Define columns*/
 .col-1-4{
     grid-template-columns: 1fr 4fr;

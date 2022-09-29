@@ -47,7 +47,7 @@
             <tr>
                 <th>Name</th>
                 <th>Username</th>
-                <th>Action</th>
+                <th style="width: 20px;">Action</th>
             </tr>
 
             <?php 
