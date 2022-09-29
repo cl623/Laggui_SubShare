@@ -138,7 +138,7 @@ nav a:active{
 }
 
 .table-friends{
-    width: 100%;
+    width: auto;
     padding: 12px;
     border: 1px solid rgb(150, 143, 143);
 }

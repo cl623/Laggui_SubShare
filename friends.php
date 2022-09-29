@@ -70,14 +70,14 @@
                             echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td>";
                             echo "<td>";
                                 echo "<div data-friendName='".$row['username']."' class='dropdown'>";
-                                    echo "<button onclick='listFriendActions('".$row['uname']."Dropdown')' class='dropbtn'>";
+                                    echo "<button onclick='listFriendActions(\"".$row['uname']."Dropdown\")' class='dropbtn'>";
                                         echo "<span class='material-icons'>view_headline</span>";
                                     echo "</button>";
                                     echo "<div id='".$row['uname']."Dropdown' class='dropdown-content'>";
                                         //echo "<a href='".$row['uname']."/profile'>View Profile</a>";
                                         //echo "<a href='".$row['uname']."/payments'>Pay</a>";
-                                        echo "<a onclick='inviteToGroup('".$row['uname']."')'><span class='material-icons'>playlist_add_circle</span>Invite to Group</a>";
-                                        echo "<a onclick='deleteFriend('".$row['uname']."')'><span class='material-icons'>no_accounts</span>Remove Friend</a>";
+                                        echo "<a onclick='inviteToGroup(\"".$row['uname']."\")'><span class='material-icons'>playlist_add_circle</span>Invite to Group</a>";
+                                        echo "<a onclick='deleteFriend(\"".$row['uname']."\")'><span class='material-icons'>no_accounts</span>Remove Friend</a>";
                                     echo "</div>";
                                 echo "</div>";
                             echo "</td>";
