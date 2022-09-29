@@ -29,9 +29,29 @@ function addFriend(){
 }
 
 function acceptRequest(element){
-    alert(element.attr("data-friendName"));
+    alert("Accepted "+ element.getAttribute("data-friendName"));
+    var username = element.getAttribute("data-friendName");
+    $.ajax({
+	type: "POST",
+	url: "../pendingRequests.php",
+	data: {action: 'add', uname: JSON.stringify(username)},
+	cache: false,
+	success: function(response){
+	    $("#pendingData").html(response);
+	}
+    });
 }
 
 function denyRequest(element){
-    alert(element.attr("data-friendName"));
+    alert("Denied "+element.getAttribute("data-friendName"));
+    var username = element.getAttribute("data-friendName");
+    $.ajax({
+        type: "POST",
+	url: "../pendingRequests.php",
+	data: {action: 'deny', uname: JSON.stringify(username)},
+	cache: false,
+	success: function(response){
+	    $("#pendingData").html(response);
+	}
+    });
 }

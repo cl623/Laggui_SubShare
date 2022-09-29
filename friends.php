@@ -19,10 +19,11 @@
                 <th>Action</th>
             </tr>
             <?php
-                try{
+    		try{
+		//	$sql = "SELECT * FROM users WHERE id = 1";
                     $sql = "SELECT name, username FROM users WHERE id IN (SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'p')";
-                    $statement = $conn->prepare($sql);
-                    $success = $statement->execute($_SESSION['id']);
+		    $statement = $conn->prepare($sql);
+                    $success = $statement->execute([$_SESSION['id']]);
                 }
                 catch(PDOException $error){
                     header("Location: friends.php?error=Unable to retrieve incoming friend requests: ".$error->getMessage());
@@ -32,12 +33,12 @@
                     $data = $statement->fetchAll();
                     foreach($data as $row){
                         echo "<tr>";
-                        echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td><td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this.data-friendName)'>add</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this.data-friendName)'>block</span></td>";
-                        echo "</tr>"
+                        echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td><td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this)'>add</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this)'>block</span></td>";
+                        echo "</tr>";
                     }
                 }
                 else{
-                    echo "<tr><td>fail</td></tr>";
+                    echo "<tr><td>Failed pending requests</td></tr>";
                 }
             ?>
         </table>
