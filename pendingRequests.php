@@ -9,20 +9,17 @@
     try{
         if($action == 'add'){
             $sql = "UPDATE friendship SET friendshipstatus = 'a' WHERE requesterID = (SELECT id FROM users WHERE username = :uname) AND addresseeID = :id";
-	//$sql = "SELECT * FROM users";	
-	    $statement = $conn->prepare($sql);
-	    $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
-	  //  $success = $statement->execute();
+            $statement = $conn->prepare($sql);
+            $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
         }
         elseif($action == 'deny'){
             $sql = "UPDATE friendship SET friendshipstatus = 'b' WHERE requesterID = (SELECT id FROM users WHERE username = :uname) AND addresseeID = :id";
-	   // $sql = "SELECT phone FROM users WHERE name = :uname AND id = :id";	
-	    $statement = $conn->prepare($sql);
-	    $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
-	}
-	else{
-	    throw new Exception('Invalid Action');
-	}
+            $statement = $conn->prepare($sql);
+            $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
+	    }
+        else{
+            throw new Exception('Invalid Action');
+        }
     }
     catch(PDOException $error){
         header("Location: friends.php?error=Unable to connect to DB: ".$error->getMessage());

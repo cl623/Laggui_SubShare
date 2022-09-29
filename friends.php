@@ -20,9 +20,8 @@
             </tr>
             <?php
     		try{
-		//	$sql = "SELECT * FROM users WHERE id = 1";
                     $sql = "SELECT name, username FROM users WHERE id IN (SELECT requesterID FROM friendship WHERE addresseeID = ? AND friendshipstatus = 'p')";
-		    $statement = $conn->prepare($sql);
+		            $statement = $conn->prepare($sql);
                     $success = $statement->execute([$_SESSION['id']]);
                 }
                 catch(PDOException $error){
@@ -35,7 +34,7 @@
                         echo "<tr>";
                         echo "<td>".$row['name']."</td>";
                         echo "<td><span class='tableUserName'>".$row['username']."</span></td>";
-                        echo "<td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this)'>add</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this)'>block</span></td>";
+                        echo "<td><span class='material-icons' data-friendName='".$row['username']."' onclick='acceptRequest(this)'>person_add_alt_1</span><span class='material-icons' data-friendName='".$row['username']."' onclick='denyRequest(this)'>block</span></td>";
                         echo "</tr>";
                     }
                 }
@@ -48,6 +47,7 @@
             <tr>
                 <th>Name</th>
                 <th>Username</th>
+                <th>Action</th>
             </tr>
 
             <?php 
@@ -64,9 +64,23 @@
                 //   If connection and query are successful do:
                 if($success){
                     $data = $statement->fetchAll();
+                    //   Serve HTML content per Friend returned:
                     foreach($data as $row){
                         echo "<tr>";
-                        echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td>";
+                            echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td>";
+                            echo "<td>";
+                                echo "<div data-friendName='".$row['username']."' class='dropdown'>";
+                                    echo "<button onclick='listFriendActions('".$row['uname']."Dropdown')' class='dropbtn'>";
+                                        echo "<span class='material-icons'>view_headline</span>";
+                                    echo "</button>";
+                                    echo "<div id='".$row['uname']."Dropdown' class='dropdown-content'>";
+                                        //echo "<a href='".$row['uname']."/profile'>View Profile</a>";
+                                        //echo "<a href='".$row['uname']."/payments'>Pay</a>";
+                                        echo "<a onclick='inviteToGroup('".$row['uname']."')'><span class='material-icons'>playlist_add_circle</span>Invite to Group</a>";
+                                        echo "<a onclick='deleteFriend('".$row['uname']."')'><span class='material-icons'>no_accounts</span>Remove Friend</a>";
+                                    echo "</div>";
+                                echo "</div>";
+                            echo "</td>";
                         echo "</tr>";
                     }
                 }
