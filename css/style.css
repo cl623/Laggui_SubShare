@@ -540,8 +540,6 @@ form.example::after{
 
 /* Drop down menus */
 .dropbtn {
-    background-color: #3498DB;
-    color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
