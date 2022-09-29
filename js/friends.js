@@ -29,36 +29,36 @@ function addFriend(){
 }
 
 function acceptRequest(element){
-    element.innerHTML("<div class='loader small-loader'></div>");
+    element.innerHTML = "<div class='loader small-loader'></div>";
     var username = element.getAttribute("data-friendName");
     $.ajax({
         type: "POST",
         url: "../pendingRequests.php",
-        data: {action: 'add', uname: JSON.stringify(username)},
+        data: {action: 'add', uname: username},
         cache: false,
         success: function(response){
-            if(response == "Success"){
+            if(response == "Added"){
                 alert(response);
                 location.reload();
             }
             else if(response == "Fail"){
-                alert(reponse);
+                alert(response);
                 location.reload();
             }
 	    },
         error: function(response){
-            element.innerHTML("add");
+            element.innerHTML = "add";
         }
     });
 }
 
 function denyRequest(element){
-    element.innerHTML("<div class='loader small-loader'></div>");
+    element.innerHTML = "<div class='loader small-loader'></div>";
     var username = element.getAttribute("data-friendName");
     $.ajax({
         type: "POST",
         url: "../pendingRequests.php",
-        data: {action: 'deny', uname: JSON.stringify(username)},
+        data: {action: 'deny', uname: username},
         cache: false,
         success: function(response){
             if(response == "Blocked"){
@@ -66,12 +66,12 @@ function denyRequest(element){
                 location.reload();
             }
             else if(response == "Fail"){
-                alert(reponse);
+                alert(response);
                 location.reload();
             }
         },
         error: function(response){
-            element.innerHTML("block");
+            element.innerHTML = "block";
         }
     });
 }

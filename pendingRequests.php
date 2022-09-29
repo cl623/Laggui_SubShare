@@ -2,33 +2,39 @@
     require "db_conn.php";
     session_start();
 
-    $action = json_decode($_POST['action']);
-    $uname = json_decode($_POST['uname']);
+    $action = $_POST['action'];
+    $uname = $_POST['uname'];
     $id = $_SESSION['id'];
+
     try{
         if($action == 'add'){
-            $sql = "UPDATE friendships SET friendshipstatus = 'a' WHERE requesterID = (SELECT id FROM users WHERE username = :uname) AND addresseeID = :id";
-            $statement = $conn->prepare($sql);
-            $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
+            $sql = "UPDATE friendship SET friendshipstatus = 'a' WHERE requesterID = (SELECT id FROM users WHERE username = :uname) AND addresseeID = :id";
+	//$sql = "SELECT * FROM users";	
+	    $statement = $conn->prepare($sql);
+	    $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
+	  //  $success = $statement->execute();
         }
         elseif($action == 'deny'){
-            $sql = "UPDATE friendships SET friendshipstatus = 'b' WHERE requesterID = (SELECT id FROM users WHERE username = :uname) AND addresseeID = :id";
-            $statement = $conn->prepare($sql);
-            $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
-        }
+            $sql = "UPDATE friendship SET friendshipstatus = 'b' WHERE requesterID = (SELECT id FROM users WHERE username = :uname) AND addresseeID = :id";
+	   // $sql = "SELECT phone FROM users WHERE name = :uname AND id = :id";	
+	    $statement = $conn->prepare($sql);
+	    $success = $statement->execute(['uname'=>$uname, 'id'=>$id]);
+	}
+	else{
+	    throw new Exception('Invalid Action');
+	}
     }
     catch(PDOException $error){
         header("Location: friends.php?error=Unable to connect to DB: ".$error->getMessage());
         exit();
     }
     if($success && $action == "add"){
-        echo "Added ".$uname;
+        echo "Added";
     }
     elseif($success && $action == "deny"){
-        echo "Blocked ".$uname;
+        echo "Blocked";
     }
     else{
         echo "Fail";
     }
-    return();
 ?>
