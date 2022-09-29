@@ -66,7 +66,7 @@
                     $data = $statement->fetchAll();
                     //   Serve HTML content per Friend returned:
                     foreach($data as $row){
-                        echo "<tr>";
+                        echo "<tr class='friendRow'>";
                             echo "<td>".$row['name']."</td><td><span class='tableUserName'>".$row['username']."</span></td>";
                             echo "<td>";
                                 echo "<div data-friendName='".$row['username']."' class='dropdown'>";
