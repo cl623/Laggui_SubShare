@@ -6,12 +6,12 @@
         <link rel="stylesheet" type="text/css" href="../css/icons.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <script type="text/javascript" src="js/jquery-1.3.2.js"> </script>
-        <!-- Google AdSense -->
+        <!-- Google AdSense 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7869965381292120" crossorigin="anonymous"></script>
         <script>
         (adsbygoogle=window.adsbygoogle||[]).requestNonPersonalizedAds=1;
         (adsbygoogle=window.adsbygoogle||[]).push({google_ad_client: "ca-pubxxx", enable_page_level_ads: true});
-        </script>
+        </script>-->
         <title><?php echo $title;?></title>
     </head>
     <body>
