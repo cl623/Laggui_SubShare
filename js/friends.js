@@ -94,3 +94,16 @@ function listFriendActions(id) {
       }
     }
   }
+
+
+function inviteToGroup(element){
+    alert("Invite " + element.getAttribute('data-friendName'));
+}
+
+function deleteFriend(element){
+    var friendName = element.getAttribute('data-friendName');
+    alert("Delete " + friendName);
+    document.getElementById("unfriendModal").style.display = "block";
+    document.getElementById("friendName").innerHTML = friendName;
+    document.getElementById("confirmDelete").setAttribute("data-friendName") = friendName;
+}

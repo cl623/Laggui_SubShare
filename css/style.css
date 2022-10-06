@@ -166,7 +166,7 @@ nav a:active{
 }
 
 .table-friends tr:nth-child(even){
-    background-color: rgb(223, 221, 219);
+    background-color: #f9f0e7;
 }
 
 
@@ -433,7 +433,7 @@ alert{
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #2e2e2e;
     color: white;
 }
 
@@ -444,7 +444,7 @@ alert{
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #2e2e2e;
     color: white;
     height: 50px;
 }
@@ -580,4 +580,8 @@ form.example::after{
 
 .show {
     display: block;
+}
+
+a:hover{
+    cursor: pointer;
 }

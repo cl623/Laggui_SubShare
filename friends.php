@@ -92,9 +92,10 @@
         </div>
     </div>
     <p class="error"><?php echo $_GET['error'];?></p>
-        <!-- The Modal -->
+
+    <!-- Add Friend Modal -->
     <div id="myModal" class="modal">
-        <!-- Modal content -->
+        <!-- Add Friend Modal content -->
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal()">&times;</span>
@@ -112,7 +113,26 @@
             </div>
         </div>
     </div>
-    <!-- End Modal -->
+    <!-- End Add Friend Modal -->
+
+    <!-- Delete Friend Modal -->
+    <div id="unfriendModal" class="modal">
+        <!-- Delete Friend Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Confirm Unfriend</h2>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to unfriend <span id=friendName></span></p>
+                <button id="confirmDelete()" onclick="confirmDelete()">Confirm</button><button onclick="closeModal()">Cancel</button>
+            </div>
+            <div class="modal-footer">
+                <span class="error"><?php echo $_GET['error']?></span>
+            </div>
+        </div>
+    </div>
+    <!-- End Delete Friend Modal -->
 
     <script src="js/modal.js"></script>
     <script src="js/friends.js"></script>
