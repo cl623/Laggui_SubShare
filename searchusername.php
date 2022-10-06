@@ -58,7 +58,8 @@
         
     if($success && ($statement->rowCount() > 0)){
         $result = $statement->fetchAll();
-        $response = "<table class='table-friends'><tr class='friend-row'><td><span>".$result[0]['name']."</span></td><td><span>".$result[0]['username']."</span></td><td><span class='material-icons' onclick='addFriend()' id='friend' data-friendName='".$result[0]['username']."'>person_add</span></td></tr></table>";
+        $response = "<table class='table-friends'><tr class='friendrow'><th>Name</th><th>Username</th><th>Action</th></tr>";
+        $response += "<tr class='friendrow'><td><span>".$result[0]['name']."</span></td><td><span>".$result[0]['username']."</span></td><td><span class='material-icons' onclick='addFriend()' id='friend' data-friendName='".$result[0]['username']."'>person_add</span></td></tr></table>";
         echo $response;
         exit();
     }

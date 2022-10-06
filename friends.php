@@ -104,11 +104,11 @@
                 <form id="addFriends" action="searchusername.php" class="searchbox" method="post">
                     <input type="text" name="searchuname" id="searchuname" placeholder="Enter Username/Phone/Email...">
                     <button type="submit"><span class="material-icons">search</span></button>
+                    <span id="postData"></span>
                 </form>
             </div>
             <div class="modal-footer">
                 <span class="error"><?php echo $_GET['error']?></span>
-                <span id="postData"></span>
             </div>
         </div>
     </div>
