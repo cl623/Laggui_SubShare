@@ -102,8 +102,8 @@
             </div>
             <div class="modal-body">
                 <form id="addFriends" action="searchusername.php" class="searchbox" method="post">
-                    <input type="text" name="searchuname" id="searchuname" placeholder="Search username...">
-                    <button type="submit"><span class="material-icons">search</span><button>
+                    <input type="text" name="searchuname" id="searchuname" placeholder="Enter Username/Phone/Email...">
+                    <button type="submit"><span class="material-icons">search</span></button>
                 </form>
             </div>
             <div class="modal-footer">

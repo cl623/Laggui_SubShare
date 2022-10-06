@@ -165,7 +165,7 @@ nav a:active{
     background-color: #ddd;
 }
 
-.table-friends tr: nth-child(even){
+.table-friends tr:nth-child(even){
     background-color: rgb(206, 186, 151);
 }
 
@@ -401,7 +401,7 @@ alert{
   
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #f5f5f5;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -438,13 +438,15 @@ alert{
 }
 
 .modal-body {
-    padding: 2px 16px;
+    padding: 29px 16px;
+    height: 100px;
 }
 
 .modal-footer {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
+    height: 50px;
 }
 
 /* Add Animation */
@@ -483,8 +485,8 @@ alert{
 
 /* Searchbox */
 form.searchbox input[type=text]{
-    padding: 10px;
-    font-size:17px;
+    padding: 7px;
+    font-size:15px;
     border: 1px solid grey;
     float: left;
     width: 80%;
