@@ -76,8 +76,8 @@
                                     echo "<div id='".$row['username']."Dropdown' class='dropdown-content'>";
                                         //echo "<a href='".$row['uname']."/profile'>View Profile</a>";
                                         //echo "<a href='".$row['uname']."/payments'>Pay</a>";
-                                        echo "<a onclick='inviteToGroup(\"".$row['uname']."\")'><span class='material-icons'>playlist_add_circle</span>Invite to Group</a>";
-                                        echo "<a onclick='deleteFriend(\"".$row['uname']."\")'><span class='material-icons'>no_accounts</span>Remove Friend</a>";
+                                        echo "<a onclick='inviteToGroup()'><span class='material-icons'>playlist_add_circle</span>Invite to Group</a>";
+                                        echo "<a onclick='deleteFriend()'><span class='material-icons'>no_accounts</span>Remove Friend</a>";
                                     echo "</div>";
                                 echo "</div>";
                             echo "</td>";
