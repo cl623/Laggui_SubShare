@@ -96,12 +96,11 @@ function listFriendActions(id) {
   }
 
 
-function inviteToGroup(element){
-    alert("Invite " + element.getAttribute('data-friendName'));
+function inviteToGroup(friendName){
+    alert("Invite " + friendName);
 }
 
-function deleteFriend(element){
-    var friendName = element.getAttribute('data-friendName');
+function deleteFriend(friendName){
     alert("Delete " + friendName);
     document.getElementById("unfriendModal").style.display = "block";
     document.getElementById("friendName").innerHTML = friendName;
